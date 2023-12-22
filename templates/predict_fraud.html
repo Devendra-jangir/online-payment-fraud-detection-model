@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        strong {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 8px;
+        }
+
+        strong.error {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        {% if is_fraud == 'fraud' %}
+            <strong class="error">Result: This is a fraud transaction</strong>
+        {% else %}
+            <strong>Result: This is not a fraud transaction</strong>
+        {% endif %}
+    </main>
+</body>
+</html>
